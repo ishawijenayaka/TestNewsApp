@@ -25,4 +25,3 @@ Junit4 and mockito
 Build and Run
 It can run through Android studio
 
-![Screenshot_20240708_155455](https://github.com/ishawijenayaka/TestNewsApp/assets/78993791/17212ca0-02fd-48ad-b880-9cbffb7c3e72)
