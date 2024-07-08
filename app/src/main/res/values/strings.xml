@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">TestNewsApp</string>
+
+<!--    navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_help">Help</string>
+    <string name="nav_register">Register</string>
+    <string name="nav_profileDetails">Profile Details</string>
+
+    <string name="hide_password">hide password</string>
+    <string name="show_password">show password</string>
+
+<!--    help-->
+    <string name="faq">FAQ section</string>
+    <string name="legal">Legal section</string>
+    <string name="contact_us">Contact us</string>
+    <string name="privacy">Privacy policy</string>
+    <string name="contact">+44 033456789</string>
+    <string name="contact_email">article@gmail.com</string>
+    <string name="ques_1">1: What types of news does the app cover?</string>
+    <string name="answer_1">he app covers various news categories including world news, sports, technology, entertainment, and business etc.</string>
+    <string name="ques_2">2: Can users comment on news articles in the app?</string>
+    <string name="answer_2">No, at the moment, users cannot comment on news articles in the app.</string>
+
+<!--   profile-->
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="name">Your Name</string>
+    <string name="error">Error</string>
+    <string name="empty_fields">Some fields are empty. Please check again</string>
+    <string name="welcome_msg">Hello, Welcome back!</string>
+    <string name="congrats">Congratulations!</string>
+    <string name="congrats_msg_register">You have successfully created your account.</string>
+    <string name="congrats_msg_login">You have successfully logged your account.</string>
+
+<!--    home-->
+    <string name="empty_news">Can not find match result</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
