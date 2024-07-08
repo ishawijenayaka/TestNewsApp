@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import com.example.testnewsapp.R
 import com.example.testnewsapp.ui.commanComponents.AnimatedArticle
 import com.example.testnewsapp.ui.commanComponents.ErrorAlertBox
+import com.example.testnewsapp.ui.commanComponents.GeneralText
 import com.example.testnewsapp.ui.commanComponents.ProgressView
 import com.example.testnewsapp.ui.commanComponents.SectionTitle
 import com.example.testnewsapp.viewmodel.NewsViewModel
@@ -76,6 +77,12 @@ fun HomeView(viewModel: NewsViewModel, topAppBar:@Composable ()->Unit){
                     active = true,
                     onActiveChange = {},
                     content = {},
+                    placeholder = {
+                        GeneralText(
+                            title = "Search here",
+                            align = TextAlign.Start,
+                            textColor = Color.Gray
+                        )},
                     leadingIcon = {
                         Icon(
                             imageVector = Icons.Default.Search,
@@ -86,6 +93,7 @@ fun HomeView(viewModel: NewsViewModel, topAppBar:@Composable ()->Unit){
                     }
                 )
 
+                // change screen according to viewmodel screen
                 when (viewModel.screenState.value) {
                     is ScreenState.InProgress -> {
                         ProgressView(modifier = Modifier)
@@ -97,7 +105,6 @@ fun HomeView(viewModel: NewsViewModel, topAppBar:@Composable ()->Unit){
 
                                 AnimatedArticle(
                                     article = article,
-                                    isVisible = true
                                 )
                             }
                         }

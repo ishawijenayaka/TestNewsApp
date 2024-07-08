@@ -17,10 +17,10 @@ import com.example.testnewsapp.model.Article
 fun AnimatedArticle(
     article: Article,
     modifier: Modifier = Modifier,
-    isVisible: Boolean
+//    isVisible: Boolean
 ) {
     AnimatedVisibility(
-        visible = isVisible,
+        visible = true,
         enter = scaleIn(
             animationSpec = spring(
                 dampingRatio = Spring.DampingRatioMediumBouncy,

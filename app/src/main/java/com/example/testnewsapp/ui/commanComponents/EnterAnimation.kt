@@ -7,6 +7,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.runtime.Composable
 
+// enter animation for fade in
 @Composable
 fun EnterAnimation(duration: Int, content: @Composable AnimatedVisibilityScope.() -> Unit) {
     AnimatedVisibility(

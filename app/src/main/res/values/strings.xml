@@ -22,7 +22,9 @@
     <string name="answer_1">he app covers various news categories including world news, sports, technology, entertainment, and business etc.</string>
     <string name="ques_2">2: Can users comment on news articles in the app?</string>
     <string name="answer_2">No, at the moment, users cannot comment on news articles in the app.</string>
-
+    <string name="open_privacy">open privacy policy</string>
+    <string name="open_call">Tapped the call button</string>
+    <string name="open_email">Tapped the email button</string>
 <!--   profile-->
     <string name="email_address">Email address</string>
     <string name="password">Password</string>

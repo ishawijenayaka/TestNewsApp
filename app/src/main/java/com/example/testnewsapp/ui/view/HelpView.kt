@@ -1,6 +1,7 @@
 package com.example.testnewsapp.ui.view
 
 import android.annotation.SuppressLint
+import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -34,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -50,7 +52,7 @@ fun HelpView(
     topAppBar:@Composable ()->Unit
 )
 {
-
+    val context = LocalContext.current
     var visible by remember { mutableStateOf(false) }
 
     val scale by animateFloatAsState(
@@ -134,7 +136,7 @@ fun HelpView(
                             text = stringResource(id = R.string.privacy),
                             icon = Icons.Filled.Lock,
                             iconTint = MaterialTheme.colorScheme.secondary,
-                            onClick = { /*TODO*/ }
+                            onClick = { Toast.makeText(context,R.string.open_privacy, Toast.LENGTH_SHORT).show() }
                         )
 
                         SectionTitle(
@@ -149,7 +151,7 @@ fun HelpView(
                             text = stringResource(id = R.string.contact),
                             icon = Icons.Filled.Call,
                             iconTint = MaterialTheme.colorScheme.secondary,
-                            onClick = { /*TODO*/ }
+                            onClick = { Toast.makeText(context,R.string.open_call, Toast.LENGTH_SHORT).show() }
                         )
 
                         IconButton(
@@ -159,7 +161,7 @@ fun HelpView(
                             text = stringResource(id = R.string.contact_email),
                             icon = Icons.Filled.Email,
                             iconTint = MaterialTheme.colorScheme.secondary,
-                            onClick = { /*TODO*/ }
+                            onClick =  { Toast.makeText(context,R.string.open_email, Toast.LENGTH_SHORT).show() }
                         )
 
                     }
