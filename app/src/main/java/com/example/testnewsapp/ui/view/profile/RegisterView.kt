@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -63,8 +64,8 @@ fun RegisterView(
 
                 Column(
                     modifier = Modifier
+                        .verticalScroll(rememberScrollState())
                         .fillMaxSize()
-//                    .background(color = MaterialTheme.colorScheme.primary)
                         .padding(innerPadding)
                         .padding(20.dp),
                     verticalArrangement = Arrangement.Top,
@@ -73,7 +74,7 @@ fun RegisterView(
                 )
                 {
                     MainTitle(
-                        title = "Create Your account",
+                        title = "Create Your Account",
                         align = TextAlign.Center
                     )
 
@@ -117,17 +118,18 @@ fun RegisterView(
                     Spacer(modifier = Modifier.height(50.dp))
 
                     RoundedCornerButton(
-                        text = "Sign UP",
+                        text = stringResource(id = R.string.create_account_btn),
                         onClick = { signUpFunction() }
                     )
 
                     Spacer(modifier = Modifier.height(20.dp))
 
                     TextButton(
-                        text = "Sing in",
+                        text = "Sing In",
                         onClick = { navController.navigate(Screen.Profile.route) }
                     )
 
+                    Spacer(modifier = Modifier.height(80.dp))
                 }
             }
 

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -70,6 +71,7 @@ fun ProfileView(
 
                 Column(
                     modifier = Modifier
+                        .verticalScroll(rememberScrollState())
                         .fillMaxSize()
                         .padding(innerPadding)
                         .padding(20.dp),
@@ -113,7 +115,7 @@ fun ProfileView(
                     Spacer(modifier = Modifier.height(50.dp))
 
                     RoundedCornerButton(
-                        text = "Sign IN",
+                        text = stringResource(id = R.string.sign_in__btn),
                         onClick = { signInFunction() }
                     )
 
@@ -123,6 +125,8 @@ fun ProfileView(
                         text = "Create a new account",
                         onClick = { navController.navigate(Screen.Register.route) }
                     )
+
+                    Spacer(modifier = Modifier.height(80.dp))
                 }
             }
 

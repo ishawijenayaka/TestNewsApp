@@ -63,7 +63,7 @@ fun Navigation( viewModel: NewsViewModel){
 
                     NavigationBarItem(
                         modifier = Modifier
-                            .padding(top = 5.dp, bottom = 5.dp)
+                            .padding()
                             .weight(1f),
                         icon = {
                             if (selected == true) {

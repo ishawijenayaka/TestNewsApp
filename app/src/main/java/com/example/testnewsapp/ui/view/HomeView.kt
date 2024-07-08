@@ -3,6 +3,7 @@ package com.example.testnewsapp.ui.view
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -27,6 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.testnewsapp.R
 import com.example.testnewsapp.ui.commanComponents.AnimatedArticle
+import com.example.testnewsapp.ui.commanComponents.AnimatedArticleWithImage
 import com.example.testnewsapp.ui.commanComponents.ErrorAlertBox
 import com.example.testnewsapp.ui.commanComponents.GeneralText
 import com.example.testnewsapp.ui.commanComponents.ProgressView
@@ -67,7 +69,7 @@ fun HomeView(viewModel: NewsViewModel, topAppBar:@Composable ()->Unit){
             {
                 SearchBar(
                     modifier = Modifier
-                        .padding(10.dp)
+                        .padding(15.dp)
                         .height(70.dp),
                     query = query.value,
                     onQueryChange = {
@@ -103,7 +105,7 @@ fun HomeView(viewModel: NewsViewModel, topAppBar:@Composable ()->Unit){
                         LazyColumn(modifier = Modifier.padding(16.dp)) {
                             items(viewModel.allNews.value) { article ->
 
-                                AnimatedArticle(
+                                AnimatedArticleWithImage(
                                     article = article,
                                 )
                             }
@@ -133,6 +135,8 @@ fun HomeView(viewModel: NewsViewModel, topAppBar:@Composable ()->Unit){
                         text = stringResource(id = R.string.empty_fields)
                     )
                 }
+
+                Spacer(modifier = Modifier.height(80.dp))
             }
         }
     )

@@ -19,22 +19,26 @@
     <string name="contact">+44 033456789</string>
     <string name="contact_email">article@gmail.com</string>
     <string name="ques_1">1: What types of news does the app cover?</string>
-    <string name="answer_1">he app covers various news categories including world news, sports, technology, entertainment, and business etc.</string>
+    <string name="answer_1">The app covers various news categories including world news, sports, technology, entertainment, and business etc.</string>
     <string name="ques_2">2: Can users comment on news articles in the app?</string>
     <string name="answer_2">No, at the moment, users cannot comment on news articles in the app.</string>
     <string name="open_privacy">open privacy policy</string>
     <string name="open_call">Tapped the call button</string>
     <string name="open_email">Tapped the email button</string>
+    
 <!--   profile-->
-    <string name="email_address">Email address</string>
+    <string name="email_address">Email Address</string>
     <string name="password">Password</string>
     <string name="name">Your Name</string>
+    <string name="create_msg">Create Your Account</string>
     <string name="error">Error</string>
     <string name="empty_fields">Some fields are empty. Please check again</string>
-    <string name="welcome_msg">Hello, Welcome back!</string>
+    <string name="welcome_msg">Hello, welcome back!</string>
     <string name="congrats">Congratulations!</string>
     <string name="congrats_msg_register">You have successfully created your account.</string>
     <string name="congrats_msg_login">You have successfully logged your account.</string>
+    <string name="create_account_btn">Create Account</string>
+    <string name="sign_in__btn">Sign In</string>
 
 <!--    home-->
     <string name="empty_news">Can not find match result</string>

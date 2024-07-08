@@ -4,6 +4,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -26,21 +27,21 @@ sealed class Screen(
     data object Profile : Screen(
         "profile",
         R.string.nav_profile,
-        Icons.Default.AccountBox,
+        Icons.Default.AccountCircle,
 
     )
 
     data object Register : Screen(
         "register",
         R.string.nav_register,
-        Icons.Default.AccountBox,
+        Icons.Default.AccountCircle,
 
     )
 
     data object ProfileDetails : Screen(
         "profileDetails",
         R.string.nav_profileDetails,
-        Icons.Default.AccountBox,
+        Icons.Default.AccountCircle,
 
         )
 

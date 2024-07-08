@@ -14,7 +14,9 @@ import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -125,14 +127,15 @@ fun HelpView(
                         )
 
                         SectionTitle(
-                            modifier = Modifier.padding(25.dp),
+                            modifier = Modifier.padding(top = 40.dp),
                             title = stringResource(id = R.string.legal),
                             align = TextAlign.Center
                         )
 
                         IconButton(
                             modifier = Modifier
-                                .fillMaxWidth(),
+                                .fillMaxWidth()
+                                .padding(top = 10.dp),
                             text = stringResource(id = R.string.privacy),
                             icon = Icons.Filled.Lock,
                             iconTint = MaterialTheme.colorScheme.secondary,
@@ -140,14 +143,15 @@ fun HelpView(
                         )
 
                         SectionTitle(
-                            modifier = Modifier.padding(25.dp),
+                            modifier = Modifier.padding(top = 40.dp),
                             title = stringResource(id = R.string.contact_us),
                             align = TextAlign.Center
                         )
 
                         IconButton(
                             modifier = Modifier
-                                .fillMaxWidth(),
+                                .fillMaxWidth()
+                                .padding(top = 10.dp),
                             text = stringResource(id = R.string.contact),
                             icon = Icons.Filled.Call,
                             iconTint = MaterialTheme.colorScheme.secondary,
@@ -164,10 +168,10 @@ fun HelpView(
                             onClick =  { Toast.makeText(context,R.string.open_email, Toast.LENGTH_SHORT).show() }
                         )
 
+                        Spacer(modifier = Modifier.height(80.dp))
                     }
                 }
             }
         }
     )
-
 }

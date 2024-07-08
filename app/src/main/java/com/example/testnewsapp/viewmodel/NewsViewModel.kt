@@ -1,7 +1,6 @@
 package com.example.testnewsapp.viewmodel
 
 import android.annotation.SuppressLint
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.example.testnewsapp.model.Article
@@ -28,24 +27,34 @@ constructor(private val repository: NewsRepo) : ViewModel() {
 
     //function for getting article
     fun fetchNews(query: String = "apple") {
+
         mainScope.launch {
             _screenState.value = ScreenState.InProgress
             runCatching {
                 repository.fetchNews(query = query)
-            }.onSuccess {
-               if (it != null) {
-                   _allNews.value = it as ArrayList<Article>
-                   println("get news ${_allNews.value}")
-                   _screenState.value = ScreenState.Success
-
-               } else {
-                   _screenState.value = ScreenState.Normal
-               }
-
+            }.onSuccess { result ->
+                result.fold(
+                    onSuccess = { articles ->
+                        if (articles.isNotEmpty()) {
+                            _allNews.value = ArrayList(articles)  // Convert List to ArrayList
+                            _screenState.value = ScreenState.Success
+                            println("get news ${_allNews.value}")
+                        } else {
+                            println("No articles found")
+                            _screenState.value = ScreenState.Normal
+                        }
+                    },
+                    onFailure = { exception ->
+                        println("Error received: ${exception.message}")
+                        _screenState.value = ScreenState.Error(exception.message ?: "Unknown error")
+                    }
+                )
             }.onFailure { exception ->
-                _screenState.value = ScreenState.Error(exception.message.toString())
+                println("get error${exception.cause}")
+                _screenState.value = ScreenState.Error(exception.message ?: "Unknown error")
             }
         }
+
     }
 
     fun clearError() {

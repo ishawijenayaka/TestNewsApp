@@ -94,6 +94,9 @@ dependencies {
     implementation (libs.hilt.android)
     kapt(libs.hilt.compiler)
 
+    //for image url
+    implementation(libs.coil.compose)
+
 //    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
     kapt (libs.androidx.hilt.compiler)
 
