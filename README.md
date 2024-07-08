@@ -5,13 +5,13 @@ and navigate to the success screen and help screen.
 
 Feature
 
-Display new title and author name
-Dark mode and light mode compatibility
-Add some animation
-Default news category is Google related news
-Simple Search function for find other news
-Basic login page without database and simple error checking
-Include one unit test for API call
+Display new title and author name. 
+Dark mode and light mode compatibility. 
+Add some animation. 
+Default news category is Google related news. 
+Simple Search function for find other news. 
+Basic login page without database and simple error checking. 
+Include one unit test for API call. 
 
 Technology used
 
@@ -25,11 +25,4 @@ Junit4 and mockito
 Build and Run
 It can run through Android studio
 
-Some screen shots
-![img.png](img.png)
 
-![img_1.png](img_1.png)
-
-![img_2.png](img_2.png)
-
-![img_3.png](img_3.png)
